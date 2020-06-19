@@ -1,0 +1,60 @@
+{
+    "info": {
+        "continue_timer": {
+            "address": 16744917,
+            "type": "|u1"
+        },
+        "round_timer": {
+            "address": 16750378,
+            "type": ">u2"
+        },
+        "enemy_health": {
+            "address": 16745154,
+            "type": ">i2"
+        },
+        "enemy_x_position": {
+            "address": 16745094,
+            "type": ">u2"
+        },
+        "enemy_y_position": {
+            "address": 16745098,
+            "type": ">u2"
+        },
+        "enemy_matches_won": {
+            "address": 16745559,
+            "type": ">u4"
+        },
+        "enemy_status": {
+            "address": 16745090,
+            "type": ">u2"
+        },
+        "enemy_character": {
+            "address": 16745563,
+            "type": "|u1"
+        },
+        "health": {
+            "address": 16744514,
+            "type": ">i2"
+        },
+        "x_position": {
+            "address": 16744454,
+            "type": ">u2"
+        },
+        "y_position": {
+            "address": 16744458,
+            "type": ">u2"
+        },
+        "status": {
+            "address": 16744450,
+            "type": ">u2"
+        },
+        "matches_won": {
+            "address": 16744922,
+            "type": "|u1"
+        },
+        "score": {
+            "address": 16744936,
+            "type": ">d4"
+        }
+    }
+}

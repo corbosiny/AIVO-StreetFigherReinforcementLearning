@@ -1,0 +1,25 @@
+{
+    "done": {
+        "variables": {
+            "continue_timer": {
+                "op": "equal",
+                "reference": 10
+            },
+            "enemy_matches_won": {
+                "op": "equal",
+                "reference": 2
+            },
+            "matches_won": {
+                "op": "equal",
+                "reference": 2
+            }
+        }
+    },
+    "reward": {
+        "script": "lua:calculate_reward"
+    },
+    "scripts": [
+        "reward_script.lua"
+    ],
+    "crop": [0, 16, 256, 200]
+}
