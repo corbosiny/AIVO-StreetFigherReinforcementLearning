@@ -1,3 +1,5 @@
+The Trello board containing the current tasks and milestones can be found here: https://trello.com/b/bLHQK3YK/street-fighter-ai
+
 # Getting Started
 
 This readme will take you through how to get this repo up and running with the example agents, make your own test agents, and also how to create your own save states to test your agents on. 
