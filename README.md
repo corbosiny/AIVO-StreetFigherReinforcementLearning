@@ -1,16 +1,30 @@
 The Trello board containing the current tasks and milestones can be found here: https://trello.com/b/bLHQK3YK/street-fighter-ai
 
-# Repo Organization
+# About this Project
 
+## Introduction
+
+AIVO is a project aimed at making a training platform using OpenAI Gym-Retro to quickly develop custom AI's trained to play Street Fighter 2 Championship Edition using reinforcement learning techniques. The name is a play on EVO, short for the evolutionary championship series. AIVO stands for the Artifical Intelligence Championship series. 
+
+## Milestones
+This project has two main goals developing the training platform and developing the architecture to run community AI tournaments.
+
+### Training Platform
+This goal aims to design and implement a clear and concise interface between a backend training environment that handles running the emulator and any custom AI Agent the users want to develop. The training environment will ask the Agents for moves when they are able to act, gather training data for use after the game, handle shifting through training states, and log the results of the training over several episodes. A user's custom Agent need only inherit from the Agent interface and implement the abstract functions required of it's children. The user can implement any functionality on top of those functions as they see fit as long as the interface between the Agent and the training environment is held to. The hope is to allow a broad range of AI types and algorithms to be developed that can all make use of the same training platform without having to replicate work done on setting up the backend.
+
+### Community Tournaments
+This goal aims to design a system wherein user submitted AIs can compete against one another in a simulated tournament to decide upon the best figher. These tournaments will be able to be viewed by a human audience over the internet similar to salty bets. 
+
+## Repo Organization
 This section will explain the organization of the repo, if you are trying to install the dependancies then skip to the next section.  
 
-The top level of the repo contains seven main directories:
+The top level of the repo contains five main directories:
 
 ### src
 This directory contains all of the source related to the engine, machine learning algorithms, and helper scripts
 
 ### tests
-This directory contains test code for each code file in src. RUN_TESTS.py can be run that will run each test in the directory, print the results, and then will return whether testing passed or failed. A git hook can be turned on that will auto run this on any push and will reject any push that does not pass the testing.
+This directory contains test code for each code file in src. RUN_TESTS.py can be run that will run each test in the directory, print the results, and then will return whether testing passed or failed. Branch protection will auto run this on any merge and will reject any merge that does not pass the testing.
 
 ### local_models
 This directory contains a set of unique directories containing model checkpoints for each separate model that is trained locally. These models are not saved online to avoid merge conflicts.
@@ -21,13 +35,14 @@ This directory contains a set of unique directories of training logs for each se
 ### examples
 This directory contains a set of basic examples that demonstrate basic functionality of several libraries used in the source code. New features usually start off as example scripts that serve as launching off points for development. The readme in the directory as a short description of what each example is demonstrating.
 
-### hooks
-Contains the git hooks that can be added to the .git folder in order to turn on or off some development features such as auto testing on commit.
-
 ### StreetFighterIISpecialChampionEdition-Genesis
 This folder contains the ROM, saved game states, environment descriptions, and RAM look ups needed to be fed into the emulator in order for the game engine to run properly.  
 
-And also in the top level of the repo is containted the requirements.txt file. This file contains all of the dependancies needed to run this project. The next section will walk you through installation of those dependancies.
+And also in the top level of the repo are two files. First is the requirements.txt file. This file contains all of the dependancies needed to run this project. The next section will walk you through installation of those dependancies. 
+
+Next is the software license that defines the legality of using this software for commercial, educational, or private purposes.
+
+After that is the Code of Conduct for working on this project, and finally there is the contribution guidelines to help you get started in contributing to this project if you have ideas for improvements.
 
 ---
 # Getting Started
@@ -223,6 +238,11 @@ Each time step from the training game memory has the RAM data from the game conv
 #### trainNetwork
 
 For training the method of policy gradients is used. A dense reward function has been designed so that the Agent can be given frequent rewards for using good moves. Policy gradients essentially uses the reward for each state, action, new state sequence as the gradient for training our network. The gradient vector then has the index of the move chosen set to the reward and all other indices are left zero. So the network is either trained to pick solely that move more or less in that state depending on the reward, but other moves are not penalized. 
+
+---
+## Further Help
+
+If you have any further questions on how to use or modify this project feel free to open up an issue so that others can see the discussion and benifit from the answer. However before asking any issues please check to see if your issue has been answered before to avoid redundancy. If you have any questions regarding contributing please refer to the contributing guidelines for more information. 
 
 ---
 ## References:

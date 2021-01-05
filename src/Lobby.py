@@ -94,8 +94,9 @@ class Lobby():
         """
         self.environment = retro.make(game= self.game, state= state, players= self.mode.value)
         self.environment = StreetFighter2Discretizer(self.environment)
-        self.environment.reset()                                                               
-        self.lastObservation, _, _, self.lastInfo = self.environment.step(Lobby.NO_ACTION)                   # The initial observation and state info are gathered by doing nothing the first frame and viewing the return data
+        self.environment.reset()                
+        # The initial observation and state info are gathered by doing nothing the first frame and viewing the return data                                               
+        self.lastObservation, _, _, self.lastInfo = self.environment.step(Lobby.NO_ACTION)                   
         self.lastAction, self.frameInputs = 0, [Lobby.NO_ACTION]
         self.currentJumpFrame = 0
         self.done = False
