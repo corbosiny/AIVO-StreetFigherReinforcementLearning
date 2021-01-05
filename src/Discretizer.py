@@ -79,7 +79,10 @@ class StreetFighter2Discretizer(Discretizer):
                                          ['RIGHT', 'Z'],
                                          ['DOWN', 'RIGHT', 'Z']])
 
-
+"""
+    Initializes an example discrete environment and randomly selects moves for the agent to make.
+    The meaning of each selected move in terms of what buttons are being pressed is also displayed.
+"""
 def main():
     env = retro.make(game='StreetFighterIISpecialChampionEdition-Genesis')
     env = StreetFighter2Discretizer(env)
@@ -89,7 +92,7 @@ def main():
     while True:
         env.render()
         action = env.action_space.sample()
-        obs, rew, done, info = env.step(action)
+        _, _, _, info = env.step(action)
         print(info['status'])
         print(env.get_action_meaning(action))
         input()

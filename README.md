@@ -1,8 +1,38 @@
 The Trello board containing the current tasks and milestones can be found here: https://trello.com/b/bLHQK3YK/street-fighter-ai
 
+# Repo Organization
+
+This section will explain the organization of the repo, if you are trying to install the dependancies then skip to the next section.  
+
+The top level of the repo contains seven main directories:
+
+### src
+This directory contains all of the source related to the engine, machine learning algorithms, and helper scripts
+
+### tests
+This directory contains test code for each code file in src. RUN_TESTS.py can be run that will run each test in the directory, print the results, and then will return whether testing passed or failed. A git hook can be turned on that will auto run this on any push and will reject any push that does not pass the testing.
+
+### local_models
+This directory contains a set of unique directories containing model checkpoints for each separate model that is trained locally. These models are not saved online to avoid merge conflicts.
+
+### local_logs
+This directory contains a set of unique directories of training logs for each separate model that is trained locally. These logs are not saved online to avoid merge conflicts.
+
+### examples
+This directory contains a set of basic examples that demonstrate basic functionality of several libraries used in the source code. New features usually start off as example scripts that serve as launching off points for development. The readme in the directory as a short description of what each example is demonstrating.
+
+### hooks
+Contains the git hooks that can be added to the .git folder in order to turn on or off some development features such as auto testing on commit.
+
+### StreetFighterIISpecialChampionEdition-Genesis
+This folder contains the ROM, saved game states, environment descriptions, and RAM look ups needed to be fed into the emulator in order for the game engine to run properly.  
+
+And also in the top level of the repo is containted the requirements.txt file. This file contains all of the dependancies needed to run this project. The next section will walk you through installation of those dependancies.
+
+---
 # Getting Started
 
-This readme will take you through how to get this repo up and running with the example agents, make your own test agents, and also how to create your own save states to test your agents on. 
+This section will take you through how to get this repo up and running with the example agents, make your own test agents, and also how to create your own save states to test your agents on. 
 
 ---
 ## Installing Dependancies
