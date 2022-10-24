@@ -4,7 +4,7 @@ The Trello board containing the current tasks and milestones can be found here: 
 
 ## Introduction
 
-AIVO is a project aimed at making a training platform using OpenAI Gym-Retro to quickly develop custom AI's trained to play Street Fighter 2 Championship Edition using reinforcement learning techniques. The name is a play on EVO, short for the evolutionary championship series. AIVO stands for the Artifical Intelligence Championship series. 
+AIVO is a project aimed at making a training platform using OpenAI Gym-Retro to quickly develop custom AI's trained to play Street Fighter 2 Championship Edition using reinforcement learning techniques.
 
 ## Milestones
 This project has two main goals developing the training platform and developing the architecture to run community AI tournaments.
